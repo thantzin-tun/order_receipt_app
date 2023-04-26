@@ -1,0 +1,48 @@
+{
+    "order": {
+        "header": {
+            "customer_name" : "Thant Zin",
+            "order_no": "ORD-556743",
+            "order_date":  "2023/4/20",
+            "cahier_name": "May May"
+        },
+        "item": [
+            {
+                "item_id": 1,
+                "item_name": "Myanmar Beer",
+                "item_price": 99,
+                "item_qty": 102,
+                "item_total_price": 1900000
+            },
+            {
+                "item_id": 2,
+                "item_name": "မာလာရှမ်းကော (ပင်လယ်စာ) စပ်စပ်ကလေး",
+                "item_price": 900,
+                "item_qty": 999999,
+                "item_total_price": 99999999
+            },
+            {
+                "item_id": 3,
+                "item_name": "ဒေါ်သောင်းတင် အာလူးကပ်သလိပ်ပြား (ကြက်)",
+                "item_price": 650,
+                "item_qty": 1,
+                "item_total_price": 19000
+            },
+            {
+                "item_id": 4,
+                "item_name": "မာလာမောက်ချိုင် ဟင်းချို (ကြက် / အစပ်)",
+                "item_price": 7500,
+                "item_qty": 2,
+                "item_total_price": 14000
+            }
+        ],
+        "footer": {
+            "sub_total" : 2950.6,
+            "discount": ["New Year",20],
+            "tax":[
+                "Commercial",400
+            ],
+            "grand_total": 4450.6
+        }
+    }
+}

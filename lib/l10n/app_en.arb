@@ -1,0 +1,16 @@
+{
+    "item": "Item",
+    "price": "Price",
+    "qty":  "Qty",
+    "total": "Total",
+    "cashier_name": "Cashier Name:",
+    "customer_name": "Customer Name:",
+    "order_number": "Order No:",
+    "order_date": "Order Date:",
+    "total": "Total",
+    "discount": "Discount",
+    "tax": "Tax",
+    "grand_total": "Grand Total",
+    "sub_total": "Sub Total",
+    "order_form": "Order Details"
+}
