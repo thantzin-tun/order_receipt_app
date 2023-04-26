@@ -8,9 +8,9 @@
     "order_number": "Order No:",
     "order_date": "Order Date:",
     "total": "Total",
-    "discount": "Discount",
-    "tax": "Tax",
-    "grand_total": "Grand Total",
-    "sub_total": "Sub Total",
+    "discount": "Discount:",
+    "tax": "Tax:",
+    "grand_total": "Grand Total:",
+    "sub_total": "Sub Total:",
     "order_form": "Order Details"
 }

@@ -60,8 +60,8 @@ class Footer {
   });
 
   double sub_total;
-  List<dynamic> discount;
-  List<dynamic> tax;
+  List<Discount> discount;
+  List<Tax> tax;
   double grand_total;
 
   factory Footer.fromJson(Map<String, dynamic> json) => _$FooterFromJson(json);
@@ -87,4 +87,26 @@ class Item {
 
   factory Item.fromJson(Map<String, dynamic> json) => _$ItemFromJson(json);
   Map<String, dynamic> toJson() => _$ItemToJson(this);
+}
+
+@JsonSerializable()
+class Tax {
+  String tax_name;
+  double tax_amount;
+
+  Tax({required this.tax_name, required this.tax_amount});
+
+  factory Tax.fromJson(Map<String, dynamic> json) => _$TaxFromJson(json);
+  Map<String, dynamic> toJson() => _$TaxToJson(this);
+}
+
+@JsonSerializable()
+class Discount {
+  String discount_name;
+  double rate;
+
+  Discount({required this.discount_name, required this.rate});
+
+  factory Discount.fromJson(Map<String, dynamic> json) => _$DiscountFromJson(json);
+  Map<String, dynamic> toJson() => _$DiscountToJson(this);
 }

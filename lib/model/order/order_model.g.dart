@@ -45,8 +45,12 @@ Map<String, dynamic> _$HeaderToJson(Header instance) => <String, dynamic>{
 
 Footer _$FooterFromJson(Map<String, dynamic> json) => Footer(
       sub_total: (json['sub_total'] as num).toDouble(),
-      discount: json['discount'] as List<dynamic>,
-      tax: json['tax'] as List<dynamic>,
+      discount: (json['discount'] as List<dynamic>)
+          .map((e) => Discount.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      tax: (json['tax'] as List<dynamic>)
+          .map((e) => Tax.fromJson(e as Map<String, dynamic>))
+          .toList(),
       grand_total: (json['grand_total'] as num).toDouble(),
     );
 
@@ -71,4 +75,24 @@ Map<String, dynamic> _$ItemToJson(Item instance) => <String, dynamic>{
       'item_price': instance.item_price,
       'item_qty': instance.item_qty,
       'item_total_price': instance.item_total_price,
+    };
+
+Tax _$TaxFromJson(Map<String, dynamic> json) => Tax(
+      tax_name: json['tax_name'] as String,
+      tax_amount: (json['tax_amount'] as num).toDouble(),
+    );
+
+Map<String, dynamic> _$TaxToJson(Tax instance) => <String, dynamic>{
+      'tax_name': instance.tax_name,
+      'tax_amount': instance.tax_amount,
+    };
+
+Discount _$DiscountFromJson(Map<String, dynamic> json) => Discount(
+      discount_name: json['discount_name'] as String,
+      rate: (json['rate'] as num).toDouble(),
+    );
+
+Map<String, dynamic> _$DiscountToJson(Discount instance) => <String, dynamic>{
+      'discount_name': instance.discount_name,
+      'rate': instance.rate,
     };

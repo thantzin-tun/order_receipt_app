@@ -52,7 +52,7 @@ class _OrderScreenPageState extends State<OrderScreenPage> {
           ),
           actions: [
             Padding(
-              padding: const EdgeInsets.only(left: 10, right: 10),
+              padding: const EdgeInsets.all(0),
               child: DropdownButton(
                 onChanged: (Language? language) {
                   MyApp.setLocale(context, Locale(language!.languageCode, ""));
@@ -97,9 +97,14 @@ class _OrderScreenPageState extends State<OrderScreenPage> {
                 color: Colors.teal,
               ));
             } else if (state is OrderSuccessState) {
+
               Footer footer = state.order.order.footer;
               Header header = state.order.order.header;
               List<Item> item = state.order.order.item;
+              double totalTax = state.totalTax;
+              String taxList = state.taxNames;
+              double totalDiscount = state.totalDiscount;
+              String discountNames = state.discountNames;
               return Container(
                 width: widget.userWidth != null
                     ? widget.userWidth
@@ -267,7 +272,6 @@ class _OrderScreenPageState extends State<OrderScreenPage> {
                                           : itemMobileFontSize),
                                   numeric: true),
                             ],
-
                             rows: List<DataRow>.generate(
                               item.length,
                               (index) => DataRow(cells: [
@@ -323,7 +327,7 @@ class _OrderScreenPageState extends State<OrderScreenPage> {
                                     : FooterFont.mobileFooterFont,
                               ),
                               Text(
-                                "${footer.sub_total}",
+                                "${footer.sub_total.toStringAsFixed(2)}",
                                 style: screenWidth > 768
                                     ? FooterFont.tabletFooterFont
                                     : FooterFont.mobileFooterFont,
@@ -335,12 +339,13 @@ class _OrderScreenPageState extends State<OrderScreenPage> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: <Widget>[
                               Text(
-                                // AppLocalizations.of(context)!.discount,
-                                "Discount (Commercial + Service + Room)",
+                                  // AppLocalizations.of(context)!.discount,
+                                  "${AppLocalizations.of(context)!.discount} ($discountNames)",
                                   style: screenWidth > 768
                                       ? FooterFont.tabletFooterFont
                                       : FooterFont.mobileFooterFont),
-                              Text("${footer.discount[1]}",
+                              Text(
+                                " - ${totalDiscount.toStringAsFixed(2)}",
                                   style: screenWidth > 768
                                       ? FooterFont.tabletFooterFont
                                       : FooterFont.mobileFooterFont),
@@ -352,15 +357,15 @@ class _OrderScreenPageState extends State<OrderScreenPage> {
                             children: <Widget>[
                               Text(
                                 // AppLocalizations.of(context)!.tax,
-                                "Tax (Commercial + Service + Room)",
+                                "${AppLocalizations.of(context)!.tax} ($taxList)",
                                 style: screenWidth > 768
                                     ? FooterFont.tabletFooterFont
                                     : FooterFont.mobileFooterFont,
-                                softWrap: true,    
+                                softWrap: true,
                               ),
                               Text(
                                 // footer.tax[1],
-                                footer.tax.toString()[1],
+                                " + ${totalTax.toStringAsFixed(2)}",
                                 style: screenWidth > 768
                                     ? FooterFont.tabletFooterFont
                                     : FooterFont.mobileFooterFont,
@@ -371,7 +376,7 @@ class _OrderScreenPageState extends State<OrderScreenPage> {
                         ],
                       )),
                   Container(
-                    color: Colors.teal,
+                    color: Color.fromARGB(255, 186, 243, 243),
                     padding: const EdgeInsets.all(10),
                     child: Column(
                       children: <Widget>[
@@ -384,7 +389,7 @@ class _OrderScreenPageState extends State<OrderScreenPage> {
                                   ? FooterFont.tabletFooterFont
                                   : FooterFont.mobileFooterFont,
                             ),
-                            Text("${footer.grand_total}",
+                            Text("${footer.grand_total.toStringAsFixed(2)}",
                                 style: screenWidth > 768
                                     ? FooterFont.tabletFooterFont
                                     : FooterFont.mobileFooterFont),

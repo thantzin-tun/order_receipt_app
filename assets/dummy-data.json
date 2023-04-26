@@ -1,48 +1,60 @@
 {
     "order": {
         "header": {
-            "customer_name" : "Thant Zin",
+            "customer_name": "Thant Zin",
             "order_no": "ORD-556743",
-            "order_date":  "2023/4/20",
+            "order_date": "2023/4/20",
             "cahier_name": "May May"
         },
         "item": [
             {
                 "item_id": 1,
                 "item_name": "Myanmar Beer",
-                "item_price": 99,
-                "item_qty": 102,
-                "item_total_price": 1900000
+                "item_price": 2000,
+                "item_qty": 5,
+                "item_total_price": 10000
             },
             {
                 "item_id": 2,
                 "item_name": "မာလာရှမ်းကော (ပင်လယ်စာ) စပ်စပ်ကလေး",
-                "item_price": 900,
-                "item_qty": 999999,
-                "item_total_price": 99999999
+                "item_price": 9000,
+                "item_qty": 1,
+                "item_total_price": 9000
             },
             {
                 "item_id": 3,
                 "item_name": "ဒေါ်သောင်းတင် အာလူးကပ်သလိပ်ပြား (ကြက်)",
-                "item_price": 650,
-                "item_qty": 1,
-                "item_total_price": 19000
+                "item_price": 15000,
+                "item_qty": 3,
+                "item_total_price": 45000
             },
             {
                 "item_id": 4,
                 "item_name": "မာလာမောက်ချိုင် ဟင်းချို (ကြက် / အစပ်)",
-                "item_price": 7500,
+                "item_price": 15500,
                 "item_qty": 2,
-                "item_total_price": 14000
+                "item_total_price": 31000
             }
         ],
         "footer": {
-            "sub_total" : 2950.6,
-            "discount": ["New Year",20],
-            "tax":[
-                "Commercial",400
+            "sub_total": 95000.00,
+            "discount": [
+                {
+                    "discount_name": "New Year",
+                    "rate": 10.0
+                }
             ],
-            "grand_total": 4450.6
+            "tax": [
+                {
+                    "tax_name": "Commercial",
+                    "tax_amount": 500.0
+                },
+                {
+                    "tax_name": "Services",
+                    "tax_amount": 500.0
+                }
+            ],
+            "grand_total": 86500
         }
     }
 }
