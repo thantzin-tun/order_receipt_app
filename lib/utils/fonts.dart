@@ -7,7 +7,7 @@ class HeaderFont  {
     static const mobileHeaderFont = TextStyle(
       color: Colors.black,
       fontWeight: FontWeight.w600,
-      fontSize: 13,
+      fontSize: 14,
     );
 
   //header for tablet fontSize
@@ -32,7 +32,7 @@ class FooterFont  {
     static const mobileFooterFont = TextStyle(
       color: Colors.black,
       fontWeight: FontWeight.w600,
-      fontSize: 14,
+      fontSize: 16,
     );
 
   //footer for tablet fontSize
