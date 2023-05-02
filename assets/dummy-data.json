@@ -25,64 +25,8 @@
                 "item_id": 3,
                 "item_name": "ဒေါ်သောင်းတင် အာလူးကပ်သလိပ်ပြား (ကြက်)",
                 "item_price": 15000,
-                "item_qty": 3,
-                "item_total_price": 45000
-            },
-            {
-                "item_id": 3,
-                "item_name": "ဒေါ်သောင်းတင် အာလူးကပ်သလိပ်ပြား (ကြက်)",
-                "item_price": 15000,
-                "item_qty": 3,
-                "item_total_price": 45000
-            },
-            {
-                "item_id": 3,
-                "item_name": "ဒေါ်သောင်းတင် အာလူးကပ်သလိပ်ပြား (ကြက်)",
-                "item_price": 15000,
-                "item_qty": 3,
-                "item_total_price": 45000
-            },
-            {
-                "item_id": 3,
-                "item_name": "ဒေါ်သောင်းတင် အာလူးကပ်သလိပ်ပြား (ကြက်)",
-                "item_price": 15000,
-                "item_qty": 3,
-                "item_total_price": 45000
-            },
-            {
-                "item_id": 3,
-                "item_name": "ဒေါ်သောင်းတင် အာလူးကပ်သလိပ်ပြား (ကြက်)",
-                "item_price": 15000,
-                "item_qty": 3,
-                "item_total_price": 45000
-            },
-            {
-                "item_id": 3,
-                "item_name": "ဒေါ်သောင်းတင် အာလူးကပ်သလိပ်ပြား (ကြက်)",
-                "item_price": 15000,
-                "item_qty": 3,
-                "item_total_price": 45000
-            },
-            {
-                "item_id": 3,
-                "item_name": "ဒေါ်သောင်းတင် အာလူးကပ်သလိပ်ပြား (ကြက်)",
-                "item_price": 15000,
-                "item_qty": 3,
-                "item_total_price": 45000
-            },
-            {
-                "item_id": 3,
-                "item_name": "ဒေါ်သောင်းတင် အာလူးကပ်သလိပ်ပြား (ကြက်)",
-                "item_price": 15000,
-                "item_qty": 3,
-                "item_total_price": 45000
-            },
-            {
-                "item_id": 3,
-                "item_name": "ဒေါ်သောင်းတင် အာလူးကပ်သလိပ်ပြား (ကြက်)",
-                "item_price": 15000,
-                "item_qty": 3,
-                "item_total_price": 45000
+                "item_qty": 38,
+                "item_total_price": 4500000
             }
         ],
         "footer": {
@@ -90,7 +34,8 @@
             "discount": [
                 {
                     "discount_name": "New Year",
-                    "rate": 10.0
+                    "rate": 10.0,
+                    "status": "percent"
                 }
             ],
             "tax": [
@@ -100,7 +45,7 @@
                 },
                 {
                     "tax_name": "Services",
-                    "tax_amount": 500.0
+                    "tax_amount": 1000.0
                 }
             ],
             "grand_total": 86500

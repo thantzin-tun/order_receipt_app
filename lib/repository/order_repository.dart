@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'package:flutter/services.dart';
+import 'package:order_flutter/data/orderData.dart';
 import 'package:order_flutter/model/order/order_model.dart';
 
 class OrderRepository {
@@ -8,7 +9,8 @@ class OrderRepository {
     //JSON string to a Map
     final jsonMap = json.decode(jsonString);
     // Map to an Order model
-    final order = Order.fromJson(jsonMap);
+    final order = Order.fromJson(jsonMap); 
+
     return order;
   }
 }

@@ -13,5 +13,6 @@
     "tax": "Tax",
     "grand_total": "Grand Total",
     "sub_total": "Sub Total",
-    "order_form": "Order Details"
+    "order_form": "Order Details",
+    "order_edit": "Order Edit Form"
 }

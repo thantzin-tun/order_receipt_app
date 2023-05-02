@@ -14,7 +14,7 @@ class HeaderFont  {
   static const tabletHeaderFont = TextStyle(
       color: Colors.black,
       fontWeight: FontWeight.w600,
-      fontSize: 16,
+      fontSize: 18,
     );
 
     //header for web fontSize
@@ -32,14 +32,14 @@ class FooterFont  {
     static const mobileFooterFont = TextStyle(
       color: Colors.black,
       fontWeight: FontWeight.w600,
-      fontSize: 16,
+      fontSize: 14,
     );
 
   //footer for tablet fontSize
   static const tabletFooterFont = TextStyle(
       color: Colors.black,
       fontWeight: FontWeight.w600,
-      fontSize: 20,
+      fontSize: 18,
     );
 
     
@@ -51,6 +51,6 @@ class FooterFont  {
 // }
 
 //Item TextSize for ThreeScreen
-final TextStyle itemMobileFontSize = TextStyle(fontSize: 14);
-final TextStyle itemTabledFontSize = TextStyle(fontSize: 18);
+final TextStyle itemMobileFontSize = TextStyle(fontSize: 13,);
+final TextStyle itemTabledFontSize = TextStyle(fontSize: 20);
 

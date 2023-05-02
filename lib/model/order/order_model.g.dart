@@ -90,9 +90,11 @@ Map<String, dynamic> _$TaxToJson(Tax instance) => <String, dynamic>{
 Discount _$DiscountFromJson(Map<String, dynamic> json) => Discount(
       discount_name: json['discount_name'] as String,
       rate: (json['rate'] as num).toDouble(),
+      status: json['status'] as String,
     );
 
 Map<String, dynamic> _$DiscountToJson(Discount instance) => <String, dynamic>{
       'discount_name': instance.discount_name,
       'rate': instance.rate,
+      'status': instance.status,
     };
