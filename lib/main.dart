@@ -75,7 +75,7 @@ class _MyAppState extends State<MyApp> {
       theme: ThemeData(
         primarySwatch: Colors.yellow,
       ),
-      home:  MultiBlocProvider(providers: [
+      home: MultiBlocProvider(providers: [
         BlocProvider<OrderCubit>(
           create: (context) => OrderCubit(orderRepository),
         ),

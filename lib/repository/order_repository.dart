@@ -9,7 +9,7 @@ class OrderRepository {
     //JSON string to a Map
     final jsonMap = json.decode(jsonString);
     // Map to an Order model
-    final order = Order.fromJson(jsonMap); 
+    final order = Order.fromJson(jsonMap);
 
     return order;
   }

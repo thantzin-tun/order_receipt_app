@@ -43,7 +43,8 @@ class _OrderScreenPageState extends State<OrderScreenPage> {
   bool total = false;
 
   void _hideColumns() {
-    if (id && item_name && price && qty && total || !id && !item_name && !price && !qty && !total) {
+    if (id && item_name && price && qty && total ||
+        !id && !item_name && !price && !qty && !total) {
       return;
     } else {
       setState(() {});
@@ -247,9 +248,14 @@ class _OrderScreenPageState extends State<OrderScreenPage> {
                       Icons.settings,
                       color: Colors.white,
                     )),
-                    IconButton(onPressed:(){
+                IconButton(
+                    onPressed: () {
                       Get.to(() => const OrderEditScreen());
-                    }, icon: const Icon(Icons.edit,color: Colors.white,))
+                    },
+                    icon: const Icon(
+                      Icons.edit,
+                      color: Colors.white,
+                    ))
               ],
             )
           ],
@@ -456,7 +462,7 @@ class _OrderScreenPageState extends State<OrderScreenPage> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          if(!id)
+                          if (!id)
                             Container(
                               width: screenWidth > 768 ? 100 : 20,
                               child: Text("#",
@@ -464,7 +470,7 @@ class _OrderScreenPageState extends State<OrderScreenPage> {
                                       ? itemTabledFontSize
                                       : itemMobileFontSize),
                             ),
-                          if(!item_name)
+                          if (!item_name)
                             Container(
                               width: screenWidth > 768 ? 350 : 140,
                               child: Text(AppLocalizations.of(context)!.item,
@@ -472,7 +478,7 @@ class _OrderScreenPageState extends State<OrderScreenPage> {
                                       ? itemTabledFontSize
                                       : itemMobileFontSize),
                             ),
-                          if(!price)
+                          if (!price)
                             Container(
                               width: screenWidth > 768 ? 120 : 80,
                               child: Text(AppLocalizations.of(context)!.price,
@@ -480,7 +486,7 @@ class _OrderScreenPageState extends State<OrderScreenPage> {
                                       ? itemTabledFontSize
                                       : itemMobileFontSize),
                             ),
-                          if(!qty)  
+                          if (!qty)
                             Container(
                               width: screenWidth > 768 ? 180 : 80,
                               child: Text(AppLocalizations.of(context)!.qty,
@@ -488,7 +494,7 @@ class _OrderScreenPageState extends State<OrderScreenPage> {
                                       ? itemTabledFontSize
                                       : itemMobileFontSize),
                             ),
-                          if(!total)  
+                          if (!total)
                             Container(
                               child: Text(AppLocalizations.of(context)!.total,
                                   style: screenWidth > 768
@@ -512,7 +518,7 @@ class _OrderScreenPageState extends State<OrderScreenPage> {
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
                                 children: <Widget>[
-                                  if(!id)
+                                  if (!id)
                                     Container(
                                       width: screenWidth > 768 ? 100 : 20,
                                       child: Text("${index + 1}",
@@ -520,7 +526,7 @@ class _OrderScreenPageState extends State<OrderScreenPage> {
                                               ? itemTabledFontSize
                                               : itemMobileFontSize),
                                     ),
-                                  if(!item_name)  
+                                  if (!item_name)
                                     Container(
                                       width: screenWidth > 768 ? 350 : 140,
                                       child: Text(item[index].item_name,
@@ -528,7 +534,7 @@ class _OrderScreenPageState extends State<OrderScreenPage> {
                                               ? itemTabledFontSize
                                               : itemMobileFontSize),
                                     ),
-                                  if(!price)  
+                                  if (!price)
                                     Container(
                                       width: screenWidth > 768 ? 120 : 80,
                                       child: Center(
@@ -537,24 +543,24 @@ class _OrderScreenPageState extends State<OrderScreenPage> {
                                                 ? itemTabledFontSize
                                                 : itemMobileFontSize),
                                       ),
-                                  ),
-                                if(!qty)
-                                  Container(
-                                       color: Colors.amberAccent,
+                                    ),
+                                  if (!qty)
+                                    Container(
+                                      color: Colors.amberAccent,
                                       width: screenWidth > 768 ? 180 : 80,
                                       child: Text("${item[index].item_qty}",
                                           style: screenWidth > 768
                                               ? itemTabledFontSize
                                               : itemMobileFontSize),
                                     ),
-                                if(!total)    
-                                  Container(
-                                    child: Text(
-                                        "${item[index].item_total_price}",
-                                        style: screenWidth > 768
-                                            ? itemTabledFontSize
-                                            : itemMobileFontSize),
-                                  ),
+                                  if (!total)
+                                    Container(
+                                      child: Text(
+                                          "${item[index].item_total_price}",
+                                          style: screenWidth > 768
+                                              ? itemTabledFontSize
+                                              : itemMobileFontSize),
+                                    ),
                                 ],
                               ),
                             );

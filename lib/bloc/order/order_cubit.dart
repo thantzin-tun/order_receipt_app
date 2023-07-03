@@ -58,5 +58,4 @@ class OrderCubit extends Cubit<OrderState> {
     OrderSuccessState currentState = state as OrderSuccessState;
     currentState.order.order.item.removeWhere((item) => item.item_id == index);
   }
-  
 }

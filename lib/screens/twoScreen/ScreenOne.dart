@@ -17,6 +17,7 @@ class _ScreenOneState extends State<ScreenOne> {
     super.initState();
     orderCubit.getOrder();
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,7 +32,11 @@ class _ScreenOneState extends State<ScreenOne> {
             width: 400,
             height: double.infinity,
             color: Colors.purple,
-            child: const Center(child: Text("Screen One",style: TextStyle(color: Colors.white,fontSize: 20),)),
+            child: const Center(
+                child: Text(
+              "Screen One",
+              style: TextStyle(color: Colors.white, fontSize: 20),
+            )),
           ),
         ],
       ),

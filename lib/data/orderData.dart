@@ -3,9 +3,8 @@ import 'package:order_flutter/model/order/order_model.dart';
 import 'package:order_flutter/screens/order_edit_screen.dart';
 
 class ApiOrder {
-    Order order;
+  Order order;
   ApiOrder({
     required this.order,
   });
-    
 }

@@ -106,8 +106,10 @@ class Discount {
   double rate;
   String status;
 
-  Discount({required this.discount_name, required this.rate,required this.status});
+  Discount(
+      {required this.discount_name, required this.rate, required this.status});
 
-  factory Discount.fromJson(Map<String, dynamic> json) => _$DiscountFromJson(json);
+  factory Discount.fromJson(Map<String, dynamic> json) =>
+      _$DiscountFromJson(json);
   Map<String, dynamic> toJson() => _$DiscountToJson(this);
 }
